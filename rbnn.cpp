@@ -18,7 +18,7 @@ using namespace std;
 string directory = "C:\\Users\\km\\Desktop\\MAG\\FloatingObjectFilter\\data";
 string file_name = "459_100.pcd";
 string result_prefix = "result";
-vector<double> radius_values {3};
+vector<double> radius_values {};
 #pragma endregion
 
 #pragma region [auxiliary]
