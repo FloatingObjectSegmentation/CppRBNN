@@ -150,9 +150,6 @@ int main (int argc, char** argv)
 	pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>);
 	ReadPointCloudFile(cloud, directory + "\\" + file_name);
 
-	for (int i = 1000; i < 2000; i++) {
-		cout << cloud->points[i].x << " " << cloud->points[i].y << " " << cloud->points[i].z << endl;
-	}
 
 	// foreach rbnn radius value
 	stringstream result_storage;
