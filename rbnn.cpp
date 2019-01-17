@@ -17,6 +17,7 @@ using namespace std;
 #pragma region [configuration]
 string directory = "C:\\Users\\km\\Desktop\\MAG\\FloatingObjectFilter\\data";
 string file_name = "459_100.pcd";
+string result_prefix = "result";
 vector<double> radius_values {3};
 #pragma endregion
 
@@ -138,8 +139,9 @@ int main (int argc, char** argv)
 	if (argc >= 3) {
 		directory = argv[1];
 		file_name = argv[2];
+		result_prefix = argv[3];
 
-		for (int i = 3; i < argc; i++) {
+		for (int i = 4; i < argc; i++) {
 			radius_values.push_back(atof(argv[i]));
 		}
 	}
@@ -187,7 +189,7 @@ int main (int argc, char** argv)
 
 	// write the results
 	ofstream outfile;
-	outfile.open(directory + "\\" + "result" + file_name, ios::out);
+	outfile.open(directory + "\\" + result_prefix + file_name, ios::out);
 	outfile << result_storage.str();
 	outfile.close();
 	cout << "results written to disc. Press any key to exit..." << endl;
